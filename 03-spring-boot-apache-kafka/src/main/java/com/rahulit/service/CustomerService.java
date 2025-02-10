@@ -10,25 +10,12 @@ import org.springframework.stereotype.Service;
 import com.rahulit.model.Customer;
 import com.rahulit.util.KafkaConstants;
 
-/**
- * This class is used to perform business operation
- * 
- * @author Ashok
- *
- */
-
 @Service("customerService")
 public class CustomerService {
 
 	@Autowired
 	private KafkaTemplate<String, Customer> kafkaTemplate;
 
-	/**
-	 * This method is used to publish customer records as msgs to kafka topic
-	 * 
-	 * @param customers
-	 * @return
-	 */
 	public String add(List<Customer> customers) {
 
 		if (!customers.isEmpty()) {
@@ -40,12 +27,6 @@ public class CustomerService {
 		return "Customer Record Added To Kafka Queue Successfully";
 	}
 
-	/**
-	 * This method is used to consume messages from kafka topic
-	 * 
-	 * @param c
-	 * @return
-	 */
 	@KafkaListener(topics = KafkaConstants.TOPIC, groupId = KafkaConstants.GROUP_ID)
 	public Customer listener(Customer c) {
 		System.out.println("***Msg recieved from Kafka Topic ::" + c);

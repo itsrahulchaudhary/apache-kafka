@@ -15,18 +15,8 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import com.rahulit.model.Customer;
 import com.rahulit.util.KafkaConstants;
 
-/**
- * 
- * @author Ashok
- *
- */
 @Configuration
 public class KafkaProduceConfig {
-	
-	/**
-	 * This method is used to Kafka Producer Config details
-	 * @return
-	 */
 
 	@Bean
 	public ProducerFactory<String, Customer> producerFactory() {
@@ -37,10 +27,6 @@ public class KafkaProduceConfig {
 		return new DefaultKafkaProducerFactory(configProps);
 	}
 
-	/**
-	 * This method is used to create KafkaTemplate bean obj
-	 * @return
-	 */
 	@Bean(name = "kafkaTemplate")
 	public KafkaTemplate<String, Customer> kafkaTemplate() {
 		return new KafkaTemplate<>(producerFactory());

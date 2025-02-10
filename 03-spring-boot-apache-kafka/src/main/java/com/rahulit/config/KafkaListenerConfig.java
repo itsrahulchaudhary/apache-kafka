@@ -16,21 +16,10 @@ import org.springframework.kafka.support.serializer.JsonDeserializer;
 import com.rahulit.model.Customer;
 import com.rahulit.util.KafkaConstants;
 
-/**
- * 
- * @author Ashok
- *
- */
-
 @Configuration
 @EnableKafka
 public class KafkaListenerConfig {
 
-	/**
-	 * This method is used to Kafka Consumer Config details
-	 * 
-	 * @return
-	 */
 	@Bean
 	public ConsumerFactory<String, Customer> consumerFactory() {
 		Map<String, Object> props = new HashMap();
@@ -39,7 +28,8 @@ public class KafkaListenerConfig {
 		props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
 
-		return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new JsonDeserializer<>(Customer.class));
+		return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(),
+				new JsonDeserializer<>(Customer.class));
 	}
 
 	@Bean

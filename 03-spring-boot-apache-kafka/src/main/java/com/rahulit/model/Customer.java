@@ -4,11 +4,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- * This class serving as model to hold data
- * @author Ashok
- *
- */
 @XmlRootElement(name = "customer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Customer {
@@ -21,11 +16,6 @@ public class Customer {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @param customerId
-	 * @param customerName
-	 * @param customerEmail
-	 */
 	public Customer(Integer customerId, String customerName, String customerEmail) {
 		super();
 		this.customerId = customerId;
