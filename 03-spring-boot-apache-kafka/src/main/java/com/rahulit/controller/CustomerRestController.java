@@ -1,4 +1,4 @@
-package com.ashok.controller;
+package com.rahulit.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ashok.model.Customer;
-import com.ashok.service.CustomerService;
+import com.rahulit.model.Customer;
+import com.rahulit.service.CustomerService;
 
 /**
  * This class is used to handle user requests

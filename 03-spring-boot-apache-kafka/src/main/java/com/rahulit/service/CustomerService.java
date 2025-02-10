@@ -1,4 +1,4 @@
-package com.ashok.service;
+package com.rahulit.service;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import com.ashok.model.Customer;
-import com.ashok.util.KafkaConstants;
+import com.rahulit.model.Customer;
+import com.rahulit.util.KafkaConstants;
 
 /**
  * This class is used to perform business operation

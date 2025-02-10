@@ -1,4 +1,4 @@
-package com.ashok.util;
+package com.rahulit.util;
 
 /**
  * This class is used to declare constants of this application
