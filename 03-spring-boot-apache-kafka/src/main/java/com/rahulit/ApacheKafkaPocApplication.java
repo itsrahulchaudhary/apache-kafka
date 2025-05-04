@@ -8,6 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ApacheKafkaPocApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApacheKafkaPocApplication.class, args);
+		SpringApplication.run(ApacheKafkaPocApplication.class, args);//
 	}
 }
