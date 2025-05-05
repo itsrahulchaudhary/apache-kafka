@@ -1,5 +1,0 @@
-com\rahulit\service\KafkaMessagePublisher.class
-com\rahulit\config\KafkaProducerConfig.class
-com\rahulit\KafkaProducerExampleApplication.class
-com\rahulit\dto\Customer.class
-com\rahulit\controller\EventController.class
