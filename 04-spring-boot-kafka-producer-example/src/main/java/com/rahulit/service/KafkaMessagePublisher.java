@@ -17,7 +17,7 @@ public class KafkaMessagePublisher {
     private KafkaTemplate<String,Object> template;
     
     public void sendMessageToTopic1(String message){
-    	template.send("javatechie-demo", message);
+    	template.send("demo", message);
     }
 
     public void sendMessageToTopic(String message){
